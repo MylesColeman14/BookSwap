@@ -12,7 +12,7 @@ htmlRouter.use(bodyParser.json());
 htmlRouter.route('/')
 
   .get((req, res, next) => {
-    connection.query("SELECT title, author, isbn, sales.asking_price from sales INNER JOIN books on title  = books.title WHERE sales.book_id =  books.book_id", function(err, data) {
+    connection.query("SELECT title, author, isbn, sales.asking_price from sales INNER JOIN books on title  = books.title WHERE sales.book_id =  books.id", function(err, data) {
       if (err) throw err;
       console.log(data)
       res.render("index", { books: data });
@@ -21,7 +21,7 @@ htmlRouter.route('/')
 
   });
 
-  .post ((req, res, next) => {
-  		connection.query("INSERT ")
-  })
+  // .post ((req, res, next) => {
+
+  // })
 module.exports = htmlRouter

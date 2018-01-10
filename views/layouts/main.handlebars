@@ -1,9 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Lunches</title>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+
+<head>
+  <title>Book Swap</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, intial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Chewy|Fugaz+One|Monoton" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <!-- Javascript -->
+  <script type="text/javascript" src="../data/searchBooks.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Search Bar -->
+      <div class="col-lg-offset-3 col-lg-6 center-block searchBar">
+        <div class="subSearch">
+          <input type="text" id="searchTitle" placeholder="Title">
+          <button id="titleSearchButton">Search</button>
+        </div>
+        <div class="subSearch">
+          <input type="text" id="searchAuthor" placeholder="Author">
+          <button id="authorSearchButton">Search</button>
+        </div>
+        <div class="subSearch">
+          <input type="text" id="searchISBN" placeholder="ISBN">
+          <button id="isbnSearchButton">Search</button>
+        </div>
+      </div>
+      <!-- End of Search Bar -->
+    </div>
+    {{{ body }}}
+    <div class="footer">
+      <p>&copy; 2018 Addison Albrecht, Myles Coleman, Rick Lopez, Chen Sia</p>
+    </div>
+  </div>
+  <script src="views.js"></script>
+</body>
+
 </html>

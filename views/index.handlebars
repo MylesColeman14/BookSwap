@@ -1,1 +1,48 @@
-<h1>{{lunch}}</h1>
+<div class="row">
+  <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-8 col-md-8 col-sm-8 col-xs-10 center-block featuredBooks">
+    <h2>Featured Books</h2> {{#each books}} {{#unless this.sold}}
+    <div class="bookGrid">
+      <li class="my-2">
+        <label> {{this.title}}</label>
+        <label>{{this.author}}</label>
+        <label>{{this.isbn}}</label>
+        <label>{{this.askingPrice}}</label>
+        <button class='btn btn-success eat float-right'>Interested</button>
+      </li>
+    </div>
+    {{/unless}} {{/each}}
+  </div>
+  <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-8 center-block inputForm ">
+    <h1>Add a Book</h1>
+    <form class="create-form">
+      <label>Title</label>
+      <br>
+      <input type="text" id="Title">
+      <br>
+      <label>Author</label>
+      <br>
+      <input type="text" id="Author">
+      <br>
+      <label>ISBN</label>
+      <br>
+      <input type="text" id="ISBN">
+      <br>
+      <label>Email</label>
+      <br>
+      <input type="text" id="sellerEmail">
+      <br>
+      <label>Asking Price</label>
+      <br>
+      <input type="text" id="askingPrice">
+      <br>
+      <button id="submitNewBook" type="submit">Submit</button>
+    </form>
+  </div>
+  <!--   {{#each sales}} {{#if this.sold}}
+          <li data-burger={{this.id}} class="my-2">
+            <label>{{this.burger_name}}</label>
+            <button class='btn btn-danger delete float-right'>x</button>
+          </li>
+          {{/if}} {{/each}} -->
+</div>
+</div>
