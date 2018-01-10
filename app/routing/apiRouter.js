@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const apiRouter = express.Router();
 
-
 apiRouter.route('/')
 // function to be used
 .get((req, res, next) => {
