@@ -69,7 +69,7 @@ body {
 	padding: 15px;
 	/*CSS GRID*/
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		justify-items: center;
 		grid-gap: 10px;
 }
@@ -79,6 +79,7 @@ body {
 	border: 1px solid black;
 	background-color: rgba(191,194,197,.8);
 	border-radius: 3px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.7);
 }
 
 .bookGrid div img {
@@ -93,12 +94,14 @@ body {
 	border: 1px solid black;
 	background-color: rgba(191,194,197,.8);
 	border-radius: 3px;
+
 }
 
 	/*Dynamic Book Data*/
 	.searchInfo {
 		font-family: "Arial Black", Gadget, sans-serif;
 		text-decoration: underline;
+		color: rgb(97,0,0);
 	}
 	.authorSearch, .isbnSearch {
 		font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -107,9 +110,9 @@ body {
 	.titleSearch {
 		font-size: 20px;
 		font-family: Georgia, serif !important;
-		filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.9));
 		font-weight: bold;
 		display: block;
+		margin: 10px 0px;
 	}
 	/*End of Dynamic Book Data*/
 
