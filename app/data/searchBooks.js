@@ -26,7 +26,6 @@ function callback(x) {
         $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
     }else{
         console.log("No image found")
-         $('.bookGrid').append("</div>");
     }
 
     if(x.items[i].volumeInfo.authors != undefined){
@@ -46,6 +45,7 @@ function callback(x) {
         $('.bookGrid').append(x.items[i].volumeInfo.industryIdentifiers[0].identifier +"</div>");
     }else{
         console.log("No isbn avalible")
+        $('.bookGrid').append("</div>");
     }   
 }
 
@@ -93,7 +93,8 @@ function callback(x) {
             }
             $('.bookGrid').append(x.items[i].volumeInfo.industryIdentifiers[0].identifier +"</div>");
         }else{
-            console.log("No isbn avalible")
+            console.log("No isbn avalible");
+            $('.bookGrid').append("</div>");
         }   
     }
 
@@ -145,7 +146,7 @@ function callback(x) {
         //logging image of book
         if(x.items[i].volumeInfo.imageLinks != undefined){
             console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
-            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'</div>");
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
         }else{
             console.log("No image found")
         }
@@ -157,6 +158,7 @@ function callback(x) {
             $('.bookGrid').append(x.items[i].volumeInfo.industryIdentifiers[0].identifier +"</div>");
         }else{
             console.log("No isbn avalible")
+            $('.bookGrid').append("</div>");
         }   
     }
 }
