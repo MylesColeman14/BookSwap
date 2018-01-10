@@ -19,7 +19,16 @@ function callback(x) {
     //do things with your data here
     //console.log("\n" + x.items[0].volumeInfo.imageLinks.thumbnail)
     console.log("\n" + x.items[0].volumeInfo.title)
-    $('.bookGrid').append("<div>" + x.items[0].volumeInfo.title); 
+    $('.bookGrid').append("<div>" + x.items[0].volumeInfo.title);
+
+    if(x.items[i].volumeInfo.imageLinks != undefined){
+        console.log(x.items[i].volumeInfo.imageLinks.thumbnail);
+        $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+    }else{
+        console.log("No image found")
+         $('.bookGrid').append("</div>");
+    }
+
     if(x.items[i].volumeInfo.authors != undefined){
         for(k=0; k<x.items[i].volumeInfo.authors.length; k++){
             console.log(x.items[i].volumeInfo.authors[k])
@@ -30,16 +39,14 @@ function callback(x) {
         console.log("authors unknown")
     }
 
-    for(i=0;i<x.items[0].volumeInfo.industryIdentifiers.length;i++){
-        console.log(x.items[0].volumeInfo.industryIdentifiers[i])
-    }
-    if(x.items[i].volumeInfo.imageLinks != undefined){
-        console.log(x.items[i].volumeInfo.imageLinks.thumbnail);
-        $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'</div>");
+    if(x.items[i].volumeInfo.industryIdentifiers != undefined){
+        for(k=0;k<x.items[i].volumeInfo.industryIdentifiers.length;k++){
+            console.log(x.items[i].volumeInfo.industryIdentifiers[k])
+        }
+        $('.bookGrid').append(x.items[i].volumeInfo.industryIdentifiers[0].identifier +"</div>");
     }else{
-        console.log("No image found")
-         $('.bookGrid').append("</div>");
-    }
+        console.log("No isbn avalible")
+    }   
 }
 
 
@@ -63,7 +70,14 @@ function callback(x) {
         //logging title of book
         console.log("\n" + x.items[i].volumeInfo.title)
         $('.bookGrid').append("<div>" + x.items[0].volumeInfo.title); 
-        //logging author of book
+
+        if(x.items[i].volumeInfo.imageLinks != undefined){
+            console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+        }else{
+            console.log("No image found")
+        }
+
         if(x.items[i].volumeInfo.authors != undefined){
             for(k=0; k<x.items[i].volumeInfo.authors.length; k++){
                 console.log(x.items[i].volumeInfo.authors[k])
@@ -73,19 +87,11 @@ function callback(x) {
             console.log("authors unknown")
         }
 
-        //logging image of book
-        if(x.items[i].volumeInfo.imageLinks != undefined){
-            console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
-            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'</div>");
-        }else{
-            console.log("No image found")
-
-        }
-
         if(x.items[i].volumeInfo.industryIdentifiers != undefined){
             for(k=0;k<x.items[i].volumeInfo.industryIdentifiers.length;k++){
                 console.log(x.items[i].volumeInfo.industryIdentifiers[k])
             }
+            $('.bookGrid').append(x.items[i].volumeInfo.industryIdentifiers[0].identifier +"</div>");
         }else{
             console.log("No isbn avalible")
         }   
@@ -116,6 +122,15 @@ function callback(x) {
         //logging title of book
         console.log("\n" + x.items[i].volumeInfo.title)
         $('.bookGrid').append("<div>" + x.items[0].volumeInfo.title); 
+
+        //logging Picture of book
+        if(x.items[i].volumeInfo.imageLinks != undefined){
+            console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+        }else{
+            console.log("No image found")
+        }
+
         //logging author of book
         if(x.items[i].volumeInfo.authors != undefined){
             for(k=0; k<x.items[i].volumeInfo.authors.length; k++){
@@ -135,8 +150,13 @@ function callback(x) {
             console.log("No image found")
         }
 
-        for(k=0;k<x.items[i].volumeInfo.industryIdentifiers.length;k++){
-            console.log(x.items[i].volumeInfo.industryIdentifiers[k])
+        if(x.items[i].volumeInfo.industryIdentifiers != undefined){
+            for(k=0;k<x.items[i].volumeInfo.industryIdentifiers.length;k++){
+                console.log(x.items[i].volumeInfo.industryIdentifiers[k])
+            }
+            $('.bookGrid').append(x.items[i].volumeInfo.industryIdentifiers[0].identifier +"</div>");
+        }else{
+            console.log("No isbn avalible")
         }   
     }
 }
