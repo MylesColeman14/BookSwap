@@ -23,7 +23,7 @@ function callback(x) {
 
     if(x.items[i].volumeInfo.imageLinks != undefined){
         console.log(x.items[i].volumeInfo.imageLinks.thumbnail);
-        $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+        $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'>");
     }else{
         console.log("No image found")
     }
@@ -73,7 +73,7 @@ function callback(x) {
 
         if(x.items[i].volumeInfo.imageLinks != undefined){
             console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
-            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'>");
         }else{
             console.log("No image found")
         }
@@ -127,7 +127,7 @@ function callback(x) {
         //logging Picture of book
         if(x.items[i].volumeInfo.imageLinks != undefined){
             console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
-            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'>");
         }else{
             console.log("No image found")
         }
@@ -146,7 +146,7 @@ function callback(x) {
         //logging image of book
         if(x.items[i].volumeInfo.imageLinks != undefined){
             console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
-            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'");
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'>");
         }else{
             console.log("No image found")
         }
