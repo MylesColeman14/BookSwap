@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Book Swap</title>
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, intial-scale=1">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Bungee|Chewy|Fugaz+One|Monoton" rel="stylesheet">
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		
+		<!-- Bootstrap -->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<script type="text/javascript" src="../data/searchBooks.js"></script>
+	</head>
+
+	<body>
+
+		<div class="header">
+
+			<h1>Book Swap</h1><img src="http://moziru.com/images/book-clipart-png-transparent-1.png">
+
+		</div>
+
+		<!-- Bootstrap Container 1 -->
+		<div class="container">
+
+			<!-- Bootstrap Row -->
+			<div class="row">
+		
+				 <!-- Featured Books -->
+				<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-8 col-md-8 col-sm-10 col-xs-8 center-block featuredBooks">
+					
+					<h2>Featured Books</h2>
+
+					<div class="bookGrid">
+						
+					</div>
+
+				</div>
+				<!-- END of Featured Books -->
+
+				<!-- Post Form -->
+				<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-2 col-xs-offset-2 col-lg-3 col-md-3 col-sm-8 col-xs-8 center-block inputForm ">
+				    <h1>Add a Book</h1>
+				    <form class="create-form">
+				        <label>Title</label><br>
+				        <input type="text" id="Title">
+				        <br>
+				        <label>Author</label><br>
+				        <input type="text" id="Author">
+				        <br>
+				        <label>ISBN</label><br>
+				        <input type="text" id="ISBN">
+				        <br>
+				        <label>Email</label><br>
+				        <input type="text" id="sellerEmail">
+				        <br>
+				        <label>Asking Price</label><br>
+				        <input type="text" id="askingPrice">
+				        <br>
+				      <button id="submitNewBook" type="submit">Submit</button>
+				    </form>
+				</div>
+				<!-- END of Post Form -->
+				
+			</div>
+			<!-- End of Bootstrap Row -->
+
+		</div>
+		<!-- End of Bootstrap Container 1 -->
+
+		<!-- Bootstrap Container 2 -->
+		<div class="container">	
+				
+				<!-- Bootstrap Row -->
+				<div class="row">
+					
+					<!-- Search Bar -->
+					<div class="col-lg-offset-3 col-lg-6 center-block searchBar">   	
+				        <div class="subSearch">
+				        	<input type="text" id="searchTitle" placeholder="Title">
+				        	<button id="titleSearchButton">Search</button>	
+				        </div>	
+				        <div class="subSearch">
+					        <input type="text" id="searchAuthor" placeholder="Author">
+					        <button id="authorSearchButton">Search</button>	
+					    </div>
+					    <div class="subSearch"> 
+					        <input type="text" id="searchISBN" placeholder="ISBN">
+					        <button id="isbnSearchButton">Search</button>		
+					    </div>
+				    </div>
+				    <!-- End of Search Bar -->
+
+				</div>
+				<!-- End of Bootstrap Row -->
+
+		</div>
+		<!-- End of Bootstrap Container 2 -->
+
+		<div class="footer">
+			<p>&copy; 2018 Addison Albrecht, Myles Coleman, Rick Lopez, Chen Sia</p>
+		</div>
+
+	</body>
+
+</html>
