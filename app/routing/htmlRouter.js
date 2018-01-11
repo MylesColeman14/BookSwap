@@ -19,9 +19,20 @@ htmlRouter.route('/')
       // res.send(data);
     });
 
-  });
+  })
 
-  // .post ((req, res, next) => {
+  .post((req, res, next) => {
+  // Test it
+  // console.log('You sent, ' + req.body.task);
+  console.log("req.body", req.body)
+  // console.log(req.body.burger_name)
 
-  // })
+  // Test it
+  // return res.send('You sent, ' + req.body.task);
+
+  // connection.query("INSERT INTO burgers (burger_name) VALUES (?)", [req.body.burger_name], function(err, result) {
+  //   if (err) throw err;
+  // });
+  res.redirect("/");
+});
 module.exports = htmlRouter
