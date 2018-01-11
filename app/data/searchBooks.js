@@ -55,7 +55,7 @@ function callback(x) {
 
         if(x.items[i].volumeInfo.imageLinks != undefined){
             console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
-            $(postedBook).append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'>");
+            $('.bookGrid').append("<img src='"+x.items[i].volumeInfo.imageLinks.thumbnail +"'>");
         }else{
             console.log("No image found")
         }
@@ -64,12 +64,12 @@ function callback(x) {
         if(x.items[i].volumeInfo.authors != undefined){
             for(k=0; k<x.items[i].volumeInfo.authors.length; k++){
                 console.log(x.items[i].volumeInfo.authors[k])
-                $(postedBook).append(x.items[i].volumeInfo.authors[k]+ "\n");
-            }
+                $('.bookGrid').append(x.items[i].volumeInfo.authors[k]);
+            } 
         }else{
-            console.log("authors unknown")
+            console.log("no authors found")
         }
-
+        
         if(x.items[i].volumeInfo.industryIdentifiers != undefined){
             for(k=0;k<x.items[i].volumeInfo.industryIdentifiers.length;k++){
                 console.log(x.items[i].volumeInfo.industryIdentifiers[k] )
@@ -91,4 +91,6 @@ function callback(x) {
 $(document).on("click", "#isbnSearchButton", getBookDetailsISBN);
 $(document).on("click", "#titleSearchButton", getBookDetailsTitle);
 $(document).on("click", "#authorSearchButton", getBookDetailsAuthor);
+
 $(document).on("click", "#submitNewBook", addNewBook);
+
