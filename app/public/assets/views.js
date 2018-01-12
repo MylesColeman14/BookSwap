@@ -5,29 +5,47 @@ $(function() {
   function deleteTodo(event) {
     event.stopPropagation();
     var id = $(this).data("id");
-    //   $.ajax({
-    //     method: "DELETE",
-    //     url: "/api/todos/" + id
-    //   }).done(getTodos);
-    // }
   }
 
   var addBook = () => {
 
-  var isbn = $('#ISBN').val();
-  var sellerEmail = $('#sellerEmail').val();
-  var askingPrice = $('#askingPrice').val();
+    var isbn = $('#ISBN').val();
+    var sellerEmail = $('#sellerEmail').val();
+    var askingPrice = $('#askingPrice').val();
 
-   // var xmlhttp = new XMLHttpRequest();
-   //  var url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn;
-   //  xmlhttp.onreadystatechange = function() {
-   //      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-   //          var x = JSON.parse(xmlhttp.responseText);
-   //          callback(x);
-   //      }
-   //  };
-   //  xmlhttp.open("GET", url, true);
-   //  xmlhttp.send();
+    // var xmlhttp = new XMLHttpRequest();
+    // var url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn;
+    // xmlhttp.onreadystatechange = function() {
+    //   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+    //     var x = JSON.parse(xmlhttp.responseText);
+    //     for (i = 0; i < x.items.length; i++) {
+    //       //logging title of book
+    //       console.log(x.items[i].volumeInfo.title)
+    //       if (x.items[i].volumeInfo.imageLinks != undefined) {
+    //         console.log(x.items[i].volumeInfo.imageLinks.thumbnail)
+    //       } else {
+    //         console.log("No image found")
+    //       }
+    //       //logging author of book
+    //       if (x.items[i].volumeInfo.authors != undefined) {
+    //         for (k = 0; k < x.items[i].volumeInfo.authors.length; k++) {
+    //           console.log(x.items[i].volumeInfo.authors[k])
+    //         }
+    //       } else {
+    //         console.log("authors unknown")
+    //       }
+    //       if (x.items[i].volumeInfo.industryIdentifiers != undefined) {
+    //         for (k = 0; k < x.items[i].volumeInfo.industryIdentifiers.length; k++) {
+    //           console.log(x.items[i].volumeInfo.industryIdentifiers[k])
+    //         }
+    //       } else {
+    //         console.log("No isbn avalible");
+    //       }
+    //     }
+    //   }
+    // };
+    // xmlhttp.open("GET", url, true);
+    // xmlhttp.send();
 
 
     axios.post('/', {
@@ -75,11 +93,5 @@ $(function() {
   //   // })
   // }
 
-  // function toggleComplete(event) {
-  //   var burger = $(this).parent().data("burger");
-  //   console.log("burger" + burger)
-  //   updateBurger(burger);
-  // }
-
-  $(document).on("click", newBook ,addBook);
-  });
+  $(document).on("click", newBook, addBook);
+});
