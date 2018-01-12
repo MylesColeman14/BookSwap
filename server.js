@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const passport = require("passport")
 const app = express();
 const port = process.env.PORT || 8080;
 
@@ -16,7 +17,8 @@ const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "handlebars");
-// app.use(express.static('js'));
+
+app.use(express.static('js'));
 
 app.use(express.static('app/public'));
 
