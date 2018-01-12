@@ -1,0 +1,242 @@
+body {
+	background-image: url("https://preview.ibb.co/fxe8Wm/books.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 0;
+	margin: 10px;
+}
+
+/*Header*/
+.header {
+	width: 100%;
+	padding: 15px;
+	background-color: rgba(255,84,81,.9);
+	box-shadow: 2px 2px 5px rgb(168,230,206);
+	display: flex;
+	margin-bottom: 30px;
+	border-bottom: 3px solid black;
+	text-align: center;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.header h1 {
+	font-family: 'Chewy', cursive;
+	font-family: 'Fugaz One', cursive;
+	font-family: 'Monoton', cursive;
+	font-family: 'Bungee', cursive;
+	filter: drop-shadow(1px 1px 5px #A8E6CE);
+	font-size: 60px;
+}
+
+.header img {
+	height: 100px;
+	filter: drop-shadow(3px 3px 5px #A8E6CE);
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*End Header*/
+
+/*Featured Books*/
+.featuredBooks {
+	width: 90%;
+	border-radius: 3px;
+	margin: auto;
+	padding-bottom: 30px;
+	background-color: rgba(0,0,0,.8);
+	border: 2px solid #5b0500;
+	box-shadow: 2px 2px 5px rgb(168,230,206);
+	margin: 30px auto;
+	text-align: center;
+}
+
+.featuredBooks h2 {
+	color: white;
+	margin: 20px auto;
+	filter: drop-shadow(2px 2px 10px rgb(97,0,0));
+}
+.bookGrid {
+	margin: 0 auto;
+	min-height: 400px;
+	width: 90%;
+	background-color: white;
+	box-shadow: 2px 2px 5px rgb(168,230,206);
+	border-radius: 3px;
+	padding: 15px;
+	/*CSS GRID*/
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		justify-items: center;
+		grid-gap: 10px;
+}
+.bookGrid div {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid black;
+	background-color: rgba(191,194,197,.8);
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.7);
+}
+
+.bookGrid div img {
+	width: 100%;
+	filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.9));
+	margin: 10px 0px;
+}
+
+.postedBooks {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid black;
+	background-color: rgba(191,194,197,.8);
+	border-radius: 3px;
+
+}
+
+	/*Dynamic Book Data*/
+	.searchInfo {
+		font-family: "Arial Black", Gadget, sans-serif;
+		text-decoration: underline;
+		color: rgb(97,0,0);
+	}
+	.authorSearch, .isbnSearch {
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+		display: block;
+	}
+	.titleSearch {
+		font-size: 20px;
+		font-family: Georgia, serif !important;
+		font-weight: bold;
+		display: block;
+		margin: 10px 0px;
+	}
+	/*End of Dynamic Book Data*/
+
+/*End of Featured Books*/
+
+/*Post Form*/
+.inputForm {
+	max-height: 550px;
+	background-color: rgba(97,0,0,.9);
+	border-radius: 5px;
+	border: 2px solid black;
+	box-shadow: 2px 2px 5px rgb(168,230,206);
+	text-align: center;
+	margin: 30px auto;
+	padding: 20px;
+}
+
+.inputForm h1 {
+	color: white;
+	filter: drop-shadow(2px 2px 10px black);
+}
+
+label, input {
+	margin: 5px auto;
+}
+
+label {
+	color: #edca6d;
+	text-shadow: 2px 2px 4px black;
+	font-size: 20px;
+}
+
+input {
+	border: 1px solid black;
+	box-shadow: 2px 2px 5px rgb(0,0,0);
+	border-radius: 5px;
+	width: 80%;
+	padding: 3px;
+}
+
+#submitNewBook {
+	margin: 20px auto 0px auto;
+	font-size: 20px;
+	padding: 8px 10px;
+	border-radius: 10px;
+	background-color: #edca6d;
+	filter: drop-shadow(1.5px 1.5px 5px black);
+}
+/*End of Post Form*/
+
+/*Search Bar*/
+.searchBar {
+	background-color: rgba(57,125,212,.9);
+	border: 2px solid black;
+	box-shadow: 2px 2px 5px rgb(168,230,206);
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+.subSearch {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.searchBar button {
+	color: white;
+	margin: auto;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-size: 20px;
+	background-color: #002e14;
+	filter: drop-shadow(1.5px 1.5px 5px white);
+}
+
+.searchBar input {
+	width: 70%;
+	padding: 8px;
+	font-size: 20px;
+	margin: 10px auto;
+	box-shadow: 2px 2px 5px rgb(0,0,0);
+}
+/*End of Search Bar*/
+
+/*Footer*/
+.footer {
+	width: 100%;
+	padding: 40px 40px;
+	background-color: rgba(255,84,81,.9);
+	text-align: center;
+	margin-top: 30px;
+	border-top: 3px solid black;
+	display: flex;
+}
+
+.footer p {
+	margin: auto;
+	font-size: 20px;
+	font-weight: bold;
+	filter: drop-shadow(1px 1px 5px #A8E6CE);
+}
+/*End of Footer*/
+
+@media (max-width: 570px) {
+	.searchBar, .inputForm, .featuredBooks {
+		max-width: 380px;
+	}	
+}
+
+@media (max-width: 992px) {
+	.inputForm {
+		max-height: 610px;
+	}
+	input {
+		width: 90%;
+	}
+}
+
+@media (max-width: 767px) {
+	.inputForm {
+		max-height: 630px;
+	}
+}
