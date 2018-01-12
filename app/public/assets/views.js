@@ -18,6 +18,18 @@ $(function() {
   var sellerEmail = $('#sellerEmail').val();
   var askingPrice = $('#askingPrice').val();
 
+   // var xmlhttp = new XMLHttpRequest();
+   //  var url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn;
+   //  xmlhttp.onreadystatechange = function() {
+   //      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+   //          var x = JSON.parse(xmlhttp.responseText);
+   //          callback(x);
+   //      }
+   //  };
+   //  xmlhttp.open("GET", url, true);
+   //  xmlhttp.send();
+
+
     axios.post('/', {
         isbn: isbn,
         email: sellerEmail,
