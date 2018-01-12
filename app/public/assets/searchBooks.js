@@ -75,3 +75,37 @@ $(document).on("click", "#isbnSearchButton", getBookDetailsISBN);
 $(document).on("click", "#titleSearchButton", getBookDetailsTitle);
 $(document).on("click", "#authorSearchButton", getBookDetailsAuthor);
 
+// $('#submitNewBook').on('click', function(event) {
+//     console.log("TEST");
+//     event.preventDefault();
+//     var userInput = {
+//         title: $('#Title').val().trim(),
+//         author: $('#Author').val().trim(),
+//         isbn:  $('#ISBN').val().trim()
+//     };
+
+//     console.log(userInput);
+
+//     // var xmlhttp = new XMLHttpRequest();
+//     var url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + userInput.isbn;
+//     // xmlhttp.onreadystatechange = function() {
+//     //     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//     //         var x = JSON.parse(xmlhttp.responseText);
+            
+//     //     }
+//     // };
+//     // xmlhttp.open("GET", url, true);
+//     // xmlhttp.send();
+
+//     $.get(url, function( data ) {
+//         console.log("is this the front end")
+//         console.log(data)
+//       $.post('/api/books', data)
+//             .done(function(data) {
+              
+//             });
+//         });
+// });
+            
+    
+

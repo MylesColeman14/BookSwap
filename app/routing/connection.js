@@ -10,7 +10,7 @@ const mysql = require("mysql");
         root: 3000,
         host: "localhost",
         user: "root",
-        password: "",
+        password: "guest",
         database: "text_bookDB",
       });
     };

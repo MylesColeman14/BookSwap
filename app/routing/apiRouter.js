@@ -43,6 +43,7 @@ apiRouter.route('/')
   res.redirect("/");
 });
 
+
 // // app.delete("/", (req, res) => {
 // //   connection.query("")
 // // })
