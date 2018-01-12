@@ -1,4 +1,4 @@
-  // var xmlhttp = new XMLHttpRequest();
+// var xmlhttp = new XMLHttpRequest();
   // var url = "https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn;
   // xmlhttp.onreadystatechange = function() {
   //   if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -184,5 +184,7 @@ apiWork(isbn, sellerEmail, askingPrice);
    
 
 
-  });
+
  
+  // $(document).on("click", newBook, addBook);
+});

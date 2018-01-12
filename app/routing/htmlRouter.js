@@ -2,7 +2,12 @@ console.log("htmlRouter R")
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const connection = require('./connection.js');
+
+const db = require("../../models");
+
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op
+// const connection = require('./connection.js');
 
 const app = express();
 
@@ -12,16 +17,24 @@ htmlRouter.use(bodyParser.json());
 htmlRouter.route('/')
 
   .get((req, res, next) => {
-    console.log(req.body)
-    connection.query("SELECT title, author, isbn, sales.asking_price from sales INNER JOIN books on title  = books.title WHERE sales.book_id =  books.id", function(err, data) {
-      if (err) throw err;
-      console.log(data)
-      res.render("index", { books: data });
-      // res.send(data);
-    });
+    console.log(req.body);
+    
+    db.Sale.findAll({
+        where: {
+          sold: false
+        },
+        include: [db.Book]
+      })
+      .then((dbSale) => {
+        console.log(dbSale)
+        console.log(db.Sale[0])
+        res.render("index", { books: dbSale });
+        // res.json(dbSale);
+      });
 
   })
 
+  //    
   .post((req, res, next) => {
   // Test it
     console.log('You sent, ' + JSON.stringify(req.body));
@@ -38,4 +51,4 @@ htmlRouter.route('/')
 
       res.redirect("/");
   });
-module.exports = htmlRouter;
+module.exports = htmlRouter
