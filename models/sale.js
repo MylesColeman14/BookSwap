@@ -39,15 +39,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       defaultValue: false
     }
-
-  },{
-    tableName: 'Sale',
-    classMethods: {
-      associate: (models) => {
-        User.belongsTo(Sale);
-        Book.belongsTo(Sale);
-      }
-    }
-  });
+  })
   return Sale;
 }

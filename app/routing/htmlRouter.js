@@ -18,19 +18,22 @@ htmlRouter.route('/')
 
   .get((req, res, next) => {
     db.Sale.findAll({
-      // where: {
-      //   [Op.col]: 'Book.id'
-      // },
-      include: [
-        db.Book
-      ]
-    })
-    .then((err, data) => {
-      if (err) throw err;
-      console.log(data)
-      res.render("index", { books: data });
-      // res.send(data);
-    })
+        // where: {
+        //   [Op.col]: 'Book.id'
+        // },
+        include: [{
+          model: db.book,
+          // include: [{
+          //   model: db.user
+          // }]
+        }]
+      })
+      .then((err, data) => {
+        if (err) throw err;
+        console.log(data)
+        res.render("index", { books: data });
+        // res.send(data);
+      })
   })
   .post((req, res, next) => {
     // Test it
