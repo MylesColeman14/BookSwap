@@ -20,6 +20,8 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
     }
 
+  }, {
+    timestamps: false,
   });
   return User;
 }

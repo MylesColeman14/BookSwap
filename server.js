@@ -12,6 +12,8 @@ const htmlRouter = require('./app/routing/htmlRouter.js')
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 const exphbs = require("express-handlebars");
 
@@ -23,7 +25,7 @@ app.use(express.static('app/public'));
 
 
 app.use('/', htmlRouter)
-app.use('/api', apiRouter)
+// app.use('/api', apiRouter)
 
 // app.listen(port, () => {
 //   console.log("App listening on PORT " + port);
