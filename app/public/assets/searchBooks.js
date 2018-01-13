@@ -74,4 +74,3 @@ function callback(x) {
 $(document).on("click", "#isbnSearchButton", getBookDetailsISBN);
 $(document).on("click", "#titleSearchButton", getBookDetailsTitle);
 $(document).on("click", "#authorSearchButton", getBookDetailsAuthor);
-
