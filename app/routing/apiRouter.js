@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const apiRouter = express.Router();
 
-apiRouter.route('/')
+apiRouter.route('/api')
 // function to be used
 .get((req, res, next) => {
   // connection.query("SELECT * FROM books;", (err, data) => {
@@ -42,6 +42,7 @@ apiRouter.route('/')
   // });
   res.redirect("/");
 });
+
 
 // // app.delete("/", (req, res) => {
 // //   connection.query("")
