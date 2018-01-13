@@ -37,10 +37,20 @@ htmlRouter.route('/')
   .post((req, res, next) => {
   console.log("req.body", req.body);
   // console.log(req.body.burger_name)
-  db.Sale.create(req.body)
+  db.Book.create({
+      title: req.body.title,
+      author: req.body.author,
+      isbn: req.body.isbn
+  }).then ((req, res, next) => {
+    console.log(req.body)
+    db.Sale.create({
+      sell_email:req.body.email,
+      asking_price: req.body.asking_price
+    })
+  })
   .then((dbSale) => {
           res.redirect("/");
-  }
+  });
   // Test it
   // return res.send('You sent, ' + req.body.task);
 
