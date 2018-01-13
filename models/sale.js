@@ -4,11 +4,27 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
-      allowNull: false,
+      allowNull: true,
     },
     sell_email: {
       type: DataTypes.STRING,
+      allowNull: true,
+    },
+     title: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    isbn: {
+      type: DataTypes.BIGINT(13),
       allowNull: false,
+    },
+    img: {
+      type: DataTypes.STRING(1028),
+      allowNull: true,
     },
     // user_id: {
     //   type: DataTypes.STRING,
@@ -36,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     sold: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
       defaultValue: false
 
     }
@@ -44,18 +60,18 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: false,
   });
 
-  Sale.associate = (models) => {
-    Sale.belongsTo(models.Book, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+  // Sale.associate = (models) => {
+  //   Sale.belongsTo(models.Book, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
     //   Sale.belongsTo(models.User, {
     //   foreignKey: {
     //     allowNull: false
     //   }
     // })
-  }
+  // }
   // db.sale.belongsTo(db.book)
 // db.sale.belongsTo(db.user) 
   return Sale;

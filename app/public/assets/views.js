@@ -56,6 +56,7 @@ $(function() {
       })
       .then(function(response) {
         console.log(`response ${{response}}`);
+        window.location.href = '/';
       })
       .catch(function(error) {
         console.log(error);

@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "guest",
     "database": "text_bookDB",
     "host": "localhost",
     "dialect": "mysql"

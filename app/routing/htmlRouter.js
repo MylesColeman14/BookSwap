@@ -23,11 +23,9 @@ htmlRouter.route('/')
         where: {
           sold: false
         },
-        include: [db.Book]
+        // include: [db.Book]
       })
       .then((dbSale) => {
-        console.log(dbSale)
-        console.log(db.Sale[0])
         res.render("index", { books: dbSale });
         // res.json(dbSale);
       });
@@ -36,11 +34,30 @@ htmlRouter.route('/')
 
   .post((req, res, next) => {
   console.log("req.body", req.body);
+  var saleE =  req.body.email
+  var saleP =  req.body.asking_price
   // console.log(req.body.burger_name)
-  db.Sale.create(req.body)
+  db.Sale.create({
+      // include:[db.Book],
+      
+      sell_email:req.body.email,
+      asking_price: req.body.asking_price,
+      title: req.body.title,
+      author: req.body.author,
+      isbn: req.body.isbn
+      
+      
+//   }).then ((saleE, saleP, req, res, next) => {
+// console.log(saleE)
+//     db.Sale.create({
+//       sell_email:saleE,
+//       asking_price: saleP
+//     })
+  })
   .then((dbSale) => {
+    
           res.redirect("/");
-  }
+  });
   // Test it
   // return res.send('You sent, ' + req.body.task);
 

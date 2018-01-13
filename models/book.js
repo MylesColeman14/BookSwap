@@ -8,11 +8,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     isbn: {
       type: DataTypes.BIGINT(13),
@@ -26,5 +26,17 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     timestamps: false,
   });
+  //  Book.associate = (models) => {
+  //   Book.hasMany(models.Sale, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  //   //   Sale.belongsTo(models.User, {
+  //   //   foreignKey: {
+  //   //     allowNull: false
+  //   //   }
+  //   // })
+  // }
   return Book;
 }

@@ -4,11 +4,11 @@
     <div class="bookGrid">
       {{#each books}} {{#unless this.sold}}
       <div class="postedBooks">
-        <span class="titleSearch"> {{this.Book.title}}</span>
+        <span class="titleSearch"> {{this.title}}</span>
         <span class="searchInfo">Author</span>
-        <span class="authorSearch">{{this.Book.author}}</span>
+        <span class="authorSearch">{{this.author}}</span>
         <span class=searchInfo>ISBN</span>
-        <span class="isbnSearch">{{this.Book.isbn}}</span>
+        <span class="isbnSearch">{{this.isbn}}</span>
         <span class=searchInfo>Price</span>
         <span class="isbnSearch">${{this.asking_price}}</span>
         <button class='btn btn-succes form-control'>Interested</button>
@@ -18,7 +18,7 @@
   </div>
   <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-3 col-md-3 col-sm-3 col-xs-8 center-block inputForm ">
     <h1>Add a Book</h1>
-    <form class="create-form">
+    <form class="create-form" action="/" method="post">
       <label>Title</label>
       <br>
       <input type="text" id="Title">
@@ -39,7 +39,7 @@
       <br>
       <input type="text" id="askingPrice">
       <br>
-      <button id="submitNewBook">Submit</button>
+      <button id="submitNewBook" value="submit">Submit</button>
     </form>
   </div>
   <!--   {{#each sales}} {{#if this.sold}}
