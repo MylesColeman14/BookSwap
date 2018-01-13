@@ -40,7 +40,7 @@ htmlRouter.route('/')
   db.Sale.create(req.body)
   .then((dbSale) => {
           res.redirect("/");
-  }
+  });
   // Test it
   // return res.send('You sent, ' + req.body.task);
 
