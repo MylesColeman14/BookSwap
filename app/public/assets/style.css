@@ -1,7 +1,7 @@
 body {
 	background-image: url("https://preview.ibb.co/fxe8Wm/books.jpg");
 	background-size: cover;
-	background-position: center;
+	background-attachment: fixed;
 	padding: 0;
 	margin: 10px;
 }

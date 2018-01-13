@@ -10,6 +10,22 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
+     title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    isbn: {
+      type: DataTypes.BIGINT(13),
+      allowNull: false,
+    },
+    img: {
+      type: DataTypes.STRING(1028),
+      allowNull: true,
+    },
     // user_id: {
     //   type: DataTypes.STRING,
     //   allowNull: false,
@@ -36,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     sold: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      allowNull: true,
       defaultValue: false
 
     }
@@ -44,18 +60,18 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: false,
   });
 
-  Sale.associate = (models) => {
-    Sale.belongsTo(models.Book, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+  // Sale.associate = (models) => {
+  //   Sale.belongsTo(models.Book, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
     //   Sale.belongsTo(models.User, {
     //   foreignKey: {
     //     allowNull: false
     //   }
     // })
-  }
+  // }
   // db.sale.belongsTo(db.book)
 // db.sale.belongsTo(db.user) 
   return Sale;

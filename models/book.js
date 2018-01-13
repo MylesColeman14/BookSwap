@@ -26,5 +26,17 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     timestamps: false,
   });
+  //  Book.associate = (models) => {
+  //   Book.hasMany(models.Sale, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  //   //   Sale.belongsTo(models.User, {
+  //   //   foreignKey: {
+  //   //     allowNull: false
+  //   //   }
+  //   // })
+  // }
   return Book;
 }

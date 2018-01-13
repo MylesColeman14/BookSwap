@@ -55,7 +55,7 @@ $(function() {
         asking_price: askingPrice
       })
       .then(function(response) {
-        console.log(`response ${{response}}`);
+        console.log("res"+response );
       })
       .catch(function(error) {
         console.log(error);
